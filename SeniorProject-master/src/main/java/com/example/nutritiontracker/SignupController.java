@@ -60,20 +60,6 @@ public class SignupController extends Implementation {
                 }
                 return userCreated;
             }
-            @Override
-            protected void succeeded() {
-                super.succeeded();
-                // This method is called if the task finished successfully.
-                // Re-enable the signup button here
-                signupButton.setDisable(false);
-            }
-            @Override
-            protected void failed() {
-                super.failed();
-                // This method is called if the task failed.
-                // Re-enable the signup button here
-                signupButton.setDisable(false);
-            }
         };
 
         signupTask.setOnFailed(e -> {
